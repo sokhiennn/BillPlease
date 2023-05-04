@@ -59,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
                     int numberPerson = Integer.parseInt(numPax.getText().toString());
 
                     //if (numberPerson!= 1)
-                        eachPays.setText("Each Pays: $" + String.format("%.2f",newAmount/numberPerson));
+                    eachPays.setText("Each Pays: $" + String.format("%.2f",newAmount/numberPerson));
                    // else
-                        //eachPays.setText("Each Pays: $" + newAmount);
+                    // eachPays.setText("Each Pays: $" + newAmount);
                 }
             }
         });

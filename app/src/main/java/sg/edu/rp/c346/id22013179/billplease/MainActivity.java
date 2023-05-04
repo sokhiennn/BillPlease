@@ -39,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
         split.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(amount.getText().toString().trim().length()!=0 && numPax.getText().toString().trim().length()!=0) {
+                if(amount.getText().toString().trim().length()!=0 &&
+                        numPax.getText().toString().trim().length()!=0) {
                     double newAmount = 0.0;
                     if (!svs.isChecked() && !gst.isChecked()) {
                         newAmount = Double.parseDouble(amount.getText().toString());
@@ -61,6 +62,16 @@ public class MainActivity extends AppCompatActivity {
                     else
                         eachPays.setText("Each Pays: $" + newAmount);
                 }
+            }
+        });
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                amount.setText("");
+                numPax.setText("");
+                svs.setChecked(false);
+                gst.setChecked(false);
+                discount.setText("");
             }
         });
 

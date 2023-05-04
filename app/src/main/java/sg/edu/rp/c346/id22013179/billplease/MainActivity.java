@@ -52,15 +52,16 @@ public class MainActivity extends AppCompatActivity {
                         newAmount = Double.parseDouble(amount.getText().toString()) * 1.17;
                     }
 
-                    if (discount.getText().toString().trim().length() != 0) {
-                        newAmount*= 1 - Double.parseDouble(discount.getText().toString())/100;
+                    if (discount.getText().toString().trim().length()!= 0) {
+                        newAmount*= 1-Double.parseDouble(discount.getText().toString())/100;
                     }
-                    totalBill.setText("Total Bill: $" + String.format("%.2f", newAmount));
-                    int numPerson = Integer.parseInt(numPax.getText().toString());
-                    if (numPerson != 1)
-                        eachPays.setText("Each Pays: $" + String.format("%.2f", newAmount/numPerson));
-                    else
-                        eachPays.setText("Each Pays: $" + newAmount);
+                    totalBill.setText("Total bill: $" + String.format("%.2f", newAmount));
+                    int numberPerson = Integer.parseInt(numPax.getText().toString());
+
+                    //if (numberPerson!= 1)
+                        eachPays.setText("Each Pays: $" + String.format("%.2f",newAmount/numberPerson));
+                   // else
+                        //eachPays.setText("Each Pays: $" + newAmount);
                 }
             }
         });
@@ -74,6 +75,5 @@ public class MainActivity extends AppCompatActivity {
                 discount.setText("");
             }
         });
-
     }
 }

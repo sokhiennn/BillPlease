@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_margin="16dp">
+    android:layout_margin="16dp"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/textAmount"
@@ -12,11 +12,11 @@
         android:text="@string/amount" />
 
     <EditText
-        android:inputType="phone"
-        android:digits="0123456789"
+        android:id="@+id/editInputAmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editInputAmount" />
+        android:digits="0123456789"
+        android:inputType="phone" />
 
     <TextView
         android:id="@+id/textNumberOfPax"
@@ -25,15 +25,15 @@
         android:text="@string/number_of_pax" />
 
     <EditText
-        android:inputType="number"
+        android:id="@+id/editInputNumPax"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editInputNumPax" />
+        android:inputType="number" />
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <ToggleButton
             android:id="@+id/toggleButtonSvs"
@@ -85,23 +85,43 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <ToggleButton
-            android:id="@+id/splitToggleButton"
+        <Button
+            android:id="@+id/splitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textOff="@string/split"
-            android:textOn="@string/no_split" />
+            android:text="@string/split" />
 
-        <ToggleButton
-            android:id="@+id/resetToggleButton"
+        <Button
+            android:id="@+id/resetButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textOff="@string/reset"
-            android:textOn="@string/no_reset" />
+            android:text="@string/reset" />
+
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/totalBill"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:layout_weight="1"
+            android:text="@string/total_bill" />
+
+        <TextView
+            android:id="@+id/eachPays"
+            android:layout_width="368dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="@string/each_pays" />
+    </LinearLayout>
+
 </LinearLayout>
